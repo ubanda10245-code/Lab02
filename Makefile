@@ -5,17 +5,14 @@ CFLAGS= -c -Wall
 
 all: prog
 
-prog: main.o factorial.o hello.o
-	$(CC) main.o factorial.o hello.o -o prog
+prog: main.o isEven.o
+	$(CC) main.o isEven.o -o prog
 
-main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
+main.o: main.c
+	$(CC) $(CFLAGS) main.c
 
-factorial.o: factorial.cpp
-	$(CC) $(CFLAGS) factorial.cpp
-
-hello.o: hello.cpp
-	$(CC) $(CFLAGS) hello.cpp
+isEven.o: isEven.c
+	$(CC) $(CFLAGS) isEven.c
 
 clean:
 	rm -rf *.o prog
