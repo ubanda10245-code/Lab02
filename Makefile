@@ -18,4 +18,4 @@ hello.o: hello.cpp
 	$(CC) $(CFLAGS) hello.cpp
 
 clean:
-	rm -rf *.o
+	rm -rf *.o prog
